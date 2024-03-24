@@ -3,6 +3,10 @@ import http from 'http'
 const server = http.createServer((req, res) => {
   let requestBody = ''
 
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
   req.on('data', (chunk) => {
     requestBody += chunk;
   });
@@ -11,11 +15,8 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json' })
 
     const response = {
-      headers: req.headers,
-      body: {
         username: 'LISKA',
-        password: 'Not secure'
-      },
+        password: 'lol Not Secure'
     }
 
     res.end(JSON.stringify(response))
