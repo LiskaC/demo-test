@@ -1,7 +1,7 @@
 import http from 'http'
 
 const server = http.createServer((req, res) => {
-  let requestBody = '';
+  let requestBody = ''
 
   req.on('data', (chunk) => {
     requestBody += chunk;
@@ -22,9 +22,9 @@ const server = http.createServer((req, res) => {
   })
 })
 
-const PORT = 3000;
-const HOST = 'localhost';
+const PORT = 3000
+const HOST = 'localhost'
 
 server.listen(PORT, HOST, () => {
-  console.log(`Server running at http://${HOST}:${PORT}/`);
+  console.log(`Server running at http://${HOST}:${PORT}/`)
 })
