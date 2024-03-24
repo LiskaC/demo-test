@@ -1,11 +1,12 @@
-import { fetchUser } from './api';
+import { Login } from './views/Login';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={fetchUser}>Press this button to get the user</button>
+        <Login/>
       </header>
     </div>
   );
