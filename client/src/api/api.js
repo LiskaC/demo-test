@@ -13,8 +13,9 @@ export async function fetchUser() {
         'Content-Type': 'application/json'
       }
     })
-    return await res.json()
+    return res.json()
   } catch (e) {
     console.error(e)
+    throw new Error(e)
   }
 }
